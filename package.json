@@ -1,0 +1,21 @@
+{
+  "name": "Again_with_Hope",
+  "version": "1.0.0",
+  "description": "Rewriting Project for Functionality and ability to use app_js and to push to Heroku",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "author": "Kelly S Johnson",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.4",
+    "express": "^4.12.3",
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-uglify": "^0.9.1",
+    "jquery": "^2.1.4",
+    "path": "^0.11.14"
+  }
+}
