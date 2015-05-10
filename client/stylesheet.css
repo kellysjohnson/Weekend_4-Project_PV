@@ -1,0 +1,97 @@
+div {
+}
+
+.sum {
+    font:16px;
+    color:
+}
+
+.head {
+    font:24px;
+    color: #228399;
+
+}
+
+.email{
+    padding-top:2px;
+    float:right;
+    margin-right:5px;
+}
+
+.nameItems{
+    padding-bottom: 110px;
+}
+
+.Gala {
+    color:#228899;
+    font-size:16px;
+}
+
+a:hover{
+    color:green;
+}
+
+.red:hover {
+    text-decoration: none;
+}
+
+span3, .red {
+    color: red;
+}
+
+span4, .blue {
+    color: blue;
+}
+
+span5 {
+    color: green;
+}
+
+/*.inside {*/
+/*height:300px;*/
+/*width:300px;*/
+/*}*/
+
+h1 {
+    text-align: center;
+    text-shadow: 0px 2px 3px #ff1d80;
+}
+
+/*.slides img {*/
+    /*border-radius:8px;*/
+    /*height: 200px;*/
+    /*width: 200px;*/
+    /*padding-top:20px;*/
+    /*margin-top:20px;*/
+/*}*/
+
+/*.item {*/
+    /*text-align:center;*/
+/*}*/
+
+/*.carousel-inner {*/
+    /*margin-top:10px;*/
+    /*height:200px;*/
+    /*width:200px;*/
+    /*background-color:*/
+/*}*/
+
+/*.slides {*/
+    /*display:inline-block;*/
+/*}*/
+
+/*.middle {*/
+    /*font-style: bold;*/
+    /*padding:5px;*/
+/*}*/
+
+.profBanner {
+    font: 24px;
+}
+
+li {
+    list-style: none;
+    font-size: 14px;
+    font-style: normal;
+}
+
