@@ -1,3 +1,9 @@
-{[
-
-]}
+{
+  "images" : [
+    { "name" : "Wedding", "image" : /Photo6.jpg, "caption" : "My amazing family" },
+    { "name" : "Daughters", "image" : /Photo2.jpg, "caption" : "Raising Daughters of Faith" }
+    { "name" : "A cool picture", "image" : /Photo3.jpg, "caption" : " " }
+    { "name" : "Backyard Camping", "image" : /Photo5.jpg, "caption" : " " }
+    { "name" : "Twin Cities 10mile", "image" : /Photo1.jpg, "caption" : "My first 10 mile race, October 2014" }
+  ]
+}

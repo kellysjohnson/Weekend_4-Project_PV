@@ -10,7 +10,7 @@ var gitData = require('./dataCallBack');
 app.set('port', process.env.PORT || 5000);
 
 app.get('/resume', function (request, response) {
-    var file = request.params[0] || '../views/templates/resume.html';
+    var file = request.params[0] || '../public/views/templates/resume.html';
 
     response.sendFile(path.join(__dirname, 'public', file));
 });

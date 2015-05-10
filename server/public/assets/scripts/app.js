@@ -1,10 +1,10 @@
 var hello = "Hello New World!";
 
-var $name = '<p class="head"><span7> Kelly Johnson </span7></p>';
+var $name = '<h2 class="head"><span7> Kelly Johnson </span7></h2>';
 var $address = '<p> Columbia Heights, MN </p>';
 var $phoneNum = '<p> 734-674-6525 </p>';
 
-var summary = '<p class="sum"><span8> Continuous learner, quirky, creative, collaborative. Passionate about science, technology, and punny words. Energetic and Eager to Engange and Elevate my coding skills. </span8></p>';
+var summary = '<h4 class="sum"><span8> Continuous learner, quirky, creative, collaborative. Passionate about science, technology, and punny words. Energetic and Eager to Engange and Elevate my coding skills. </span8></h4>';
 
 var professionalThings = '<div><div class="col-md-6 pdev"><ul>' +
     '<li> <a href = "http://solutions.3m.com/wps/portal/3M/en_US/NA_Optical/Systems">  <span3>3M Optical</span3> <span4>Systems</span4> <span5>Division</span5> </a> </li><li> Product Engineer </li><li> Quality Assurance </li>' +
@@ -31,16 +31,13 @@ $(document).ready(function() {
     console.log(professionalThings);
 
 function displayResume() {
-    $('.profBanner').append(resumeHTL).children().hide();
+    $('.profBanner').append(resumeHTML).children().hide();
 }
 
-    $('.professional').on("click", function(){
-        $('.profBanner').children().slideToggle();
-    });
 
     if (resumeHTML == ""){
         $.ajax({
-            url: '/template',
+            url: 'resume',
             success: function(response) {
                 resumeHTML = response;
                 displayResume();
@@ -50,7 +47,11 @@ function displayResume() {
         console.log("You already initiated.");
     }
 
-    $('.professional').append(resumeHtml).children().slideToggle();
+    $('.professional').on("click", function(){
+        $('.profBanner').children().slideToggle();
+    });
+
+    //$('.professional').append(resumeHTML).children().hide();
 
 });
 

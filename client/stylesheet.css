@@ -1,18 +1,16 @@
-div {
+.head {
+    color: #ff1d80;
 }
 
 .footer {
     text-align: center;
+    color: #ff1d80;
+    font-weight:bold;
 }
 .sum {
     font:16px;
-    color:
-}
-
-.head {
-    font:24px;
-    color: #228399;
-
+    font: HelveticaNeue-Light;
+    color: salmon;
 }
 
 .email{
@@ -22,7 +20,7 @@ div {
 }
 
 .nameItems{
-    padding-bottom: 110px;
+    padding-bottom: 105px;
 }
 
 .Gala {
