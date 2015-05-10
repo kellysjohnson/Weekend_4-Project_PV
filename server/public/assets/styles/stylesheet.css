@@ -1,12 +1,18 @@
 div {
 }
 
-span8 {
+.footer {
+    text-align: center;
+}
+.sum {
     font:16px;
+    color:
 }
 
-span7 {
+.head {
     font:24px;
+    color: #228399;
+
 }
 
 .email{
@@ -16,7 +22,7 @@ span7 {
 }
 
 .nameItems{
-    padding-bottom: 100px;
+    padding-bottom: 110px;
 }
 
 .Gala {

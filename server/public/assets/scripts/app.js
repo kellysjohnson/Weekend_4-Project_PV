@@ -10,14 +10,13 @@ var professionalThings = '<div><div class="col-md-6 pdev"><ul>' +
     '<li> <a href = "http://solutions.3m.com/wps/portal/3M/en_US/NA_Optical/Systems">  <span3>3M Optical</span3> <span4>Systems</span4> <span5>Division</span5> </a> </li><li> Product Engineer </li><li> Quality Assurance </li>' +
     '<li> <a href ="http://solutions.3m.com/wps/portal/3M/en_US/Renewable/Energy" class="red"> 3M Renewable Energy </a></li><li>Product Engineer </li><li>Optimized Operations</li></ul></div>' + '<div class="col-md-6 law"><ul>' + '<li class="Gala">Legal</li><li>Document Reivew</li><li>Patent Law Clerk</li><li>Judicial Extern</li></ul></div></div>';
 
-var carouselHTML;
+var resumeHTML = "";
 
 $(document).ready(function() {
     console.log(hello);
 
     //Write name at top of page
-    $('.nameBlock').append('<div class="nameItems">' + $name + summary +'</div>');
-
+    $('.nameBlock').append('<div class="nameItems">' + $name + summary + '</div>');
 
 
     //Append verses to respective rows in p tags
@@ -31,15 +30,29 @@ $(document).ready(function() {
 
     console.log(professionalThings);
 
-    $('.profBanner').append('<div>' + professionalThings + '</div>').children().hide();
+function displayResume() {
+    $('.profBanner').append(resumeHTL).children().hide();
+}
+
     $('.professional').on("click", function(){
         $('.profBanner').children().slideToggle();
     });
+
+    if (resumeHTML == ""){
+        $.ajax({
+            url: '/template',
+            success: function(response) {
+                resumeHTML = response;
+                displayResume();
+                }
+            });
+    } else {
+        console.log("You already initiated.");
+    }
+
+    $('.professional').append(resumeHtml).children().slideToggle();
+
 });
-
-
-
-
 
 
 
