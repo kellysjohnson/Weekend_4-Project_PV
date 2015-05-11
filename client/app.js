@@ -33,7 +33,7 @@ $(document).ready(function() {
     //Append the resume data to something that exists on the DOM already, like div class proBanner, must hide to start.
     //Then, make an "on click" so that on click, the information will slideToggle.
 
-    console.log(professionalThings);
+    //console.log(professionalThings);
 
     function displayResume() {
      $('.profBanner').append(resumeHTML).children().hide();
@@ -58,14 +58,38 @@ $(document).ready(function() {
     //Now bring in images to use for carousel other than placekitten.  Use a data.json call.
     //Loop through those images, to append each one to the DOM.
 
-    $.get('data.json', function(data) {
-        if (imageData = ""){
-        imageData = data;
-        for (var i= 0; i<imageData.images.length, i++) {
-            $('.carousel-inner').append(imageData.images[i].image).hide();
+    //$.get('data.json', function(data) {
+    //    if (imageData = "") {
+    //        imageData = data;
+    //        for (var i = 0; i < imageData.images.length; i++) {
+    //            var imageHolder = '<div class="item active"><img src="imageData.images[i].image" class="center-block img-responsive" alt="Photo1"></div>'
+    //            $('.carousel-inner').append(imageHolder).hide();
+    //        }
+    //
+    //        //setinterval (function () {$('.carousel-inner').children().next().toggleClass("active")}, 2000);
+    //
+    //    } else {
+    //        console.log("You already initiated.");
+    //    }
+    //});
+
+
+    //Some Things - Neat!  An easier way to use json data
+    if (imageData == "") {
+        $.get('./data.json', function(data) {
+            imageData = data;
+            console.log(imageData);
+            for (var i = 0; i < imageData.images.length; i++) {
+                $('.xtras').append('<div class="col-md-4 neat"><div class="name">' + imageData.images[i].name + '</div><img src="imageData.images[i].image"></div></div>').hide();
+                console.log("Getting info!");
             }
-            } else { console.log("You already initiated.");
-        }
+        });
+    } else {console.log("Got it!");}
+
+            $('.neatThings').on("click", function(){
+                $('.xtras').children().slideToggle();
+            });
+
 });
 
 

@@ -8,14 +8,17 @@ var apiKey = '?client_id=f8a4b95805c9804c9eb7&client_secret=4b1bff35a5b8b802fe4b
 
 var displayData = function (data) {
     // User object is returned JSON property
+    console.log("AJAX here hello!");
     var user = data;
     // Dynamically create container
-    var $userDiv = $('<div class="well well-sm"></div>');
+    var $userDiv = $('<div class="well well-sm super"></div>');
     var $name = $('<div class="user-name"></div>');
     // Build img + username header
     $name.append("<img src='" + user.avatar_url + "'>");
     $name.append('<h3><a href="' + user.html_url + '">' + user.login + '</a></h3>');
     $userDiv.append($name);
+    //$('.pictureCarrier').append($userDiv);
+
 };
 
 module.exports = displayData;
@@ -31,6 +34,7 @@ function search(query){
             console.log("complete!")},
         success: function(data) {
             displayData(data.results);
+            console.log(data.results);
         }
     });
 
