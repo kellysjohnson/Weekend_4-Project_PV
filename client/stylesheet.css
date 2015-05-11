@@ -2,6 +2,14 @@
     color: #ff1d80;
 }
 
+h4 {
+    color:black;
+}
+
+.item {
+    margin: auto;
+}
+
 .footer {
     text-align: center;
     color: #ff1d80;
@@ -20,7 +28,7 @@
 }
 
 .nameItems{
-    padding-bottom: 105px;
+    padding-bottom: 108px;
 }
 
 .Gala {

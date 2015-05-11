@@ -13,16 +13,25 @@ app.get('/resume', function (request, response) {
     response.sendFile(path.join(__dirname, 'public', file));
 });
 
+app.get('/data', function(request, response){
+    var file = request.params[0] || '/data.json';
+
+    response.sendFile(path.join(__dirname, 'public', file));
+});﻿
+
 app.get('/*', function (request, response) {
     var file = request.params[0] || 'views/index.html';
 
     response.sendFile(path.join(__dirname, 'public', file));
 });
 
-//app.get('/', function (request, response){
-//    response.send(gitData);
-//});
+app.get('/*', function (request, response){
+    response.send(gitData);
+});
 
 app.listen(app.get('port'), function(){
     console.log("I am listening on port: " + (app.get('port')));
 });
+
+
+

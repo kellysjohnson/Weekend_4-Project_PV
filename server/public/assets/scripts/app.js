@@ -12,7 +12,7 @@ var summary = '<h4 class="sum"><span8> Continuous learner, quirky, creative, col
 //    '<li> <a href ="http://solutions.3m.com/wps/portal/3M/en_US/Renewable/Energy" class="red"> 3M Renewable Energy </a></li><li>Product Engineer </li><li>Optimized Operations</li></ul></div>' + '<div class="col-md-6 law"><ul>' + '<li class="Gala">Legal</li><li>Document Reivew</li><li>Patent Law Clerk</li><li>Judicial Extern</li></ul></div></div>';
 
 var resumeHTML = "";
-var imageData = "";
+var someData = "";
 
 $(document).ready(function() {
     console.log(hello);
@@ -75,15 +75,24 @@ $(document).ready(function() {
 
 
     //Some Things - Neat!  An easier way to use json data
-    if (imageData == "") {
-        $.get('./data.json', function(data) {
-            imageData = data;
-            console.log(imageData);
-            for (var i = 0; i < imageData.images.length; i++) {
-                $('.xtras').append('<div class="col-md-4 neat"><div class="name">' + imageData.images[i].name + '</div><img src="imageData.images[i].image"></div></div>').hide();
-                console.log("Getting info!");
+function appendData () {
+    for (var i = 0; i < someData.images.length; i++) {
+        $('.xtras').append('<div class="col-md-4 neat"><div class="name">' + someData.images[i].name + '</div><img src="imageData.images[i].image"></div></div>').hide();
+        console.log("Getting info!");
+    }
+
+}
+
+    if (someData == "") {
+        $.ajax({
+            url: 'data',
+        success: function(data) {
+            someData = data;
+            console.log(someData.results);
+            appendData();
             }
         });
+
     } else {console.log("Got it!");}
 
             $('.neatThings').on("click", function(){
