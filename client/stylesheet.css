@@ -6,6 +6,12 @@ h4 {
     color:black;
 }
 
+.name {
+    display: inline-block;
+    border-top: 10px;
+    color: salmon;
+}
+
 .item {
     margin: auto;
 }
@@ -20,6 +26,7 @@ h4 {
     font: HelveticaNeue-Light;
     color: salmon;
 }
+
 
 .email{
     padding-top:2px;
@@ -56,14 +63,14 @@ span5 {
     color: green;
 }
 
-/*.inside {*/
-/*height:300px;*/
-/*width:300px;*/
-/*}*/
+.inner-carousel {
+    margin-top: 10px;
+}
 
 h1 {
     text-align: center;
     text-shadow: 0px 2px 3px #ff1d80;
+    font-size: 28px;
 }
 
 /*.slides img {*/

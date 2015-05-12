@@ -21,8 +21,6 @@ var displayData = function (data) {
 
 };
 
-module.exports = displayData;
-
 function search(query){
 
     $.ajax ({
@@ -37,6 +35,10 @@ function search(query){
             console.log(data.results);
         }
     });
+
+    module.exports.display = displayData;
+    module.exports.search = search;
+
 
     // Will be used with search button feature button class=js-query
     // $('.js-query').val()
